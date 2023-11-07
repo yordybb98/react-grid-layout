@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="icon-buildercolumn" transform="translate(-1270 -5963)">
+    <rect id="box" width="64" height="64" transform="translate(1270 5963)" fill="none"/>
+    <g id="box-2" data-name="box" transform="translate(1270 5963)" fill="#fff" stroke="#ebebeb" stroke-width="1" stroke-dasharray="8 8">
+      <rect width="64" height="44" rx="8" stroke="none"/>
+      <rect x="0.5" y="0.5" width="63" height="43" rx="7.5" fill="none"/>
+    </g>
+    <rect id="box-3" data-name="box" width="52" height="32" rx="8" transform="translate(1276 5969)" fill="#0066a4"/>
+    <rect id="box-4" data-name="box" width="64" height="6" rx="3" transform="translate(1270 6021)" fill="#ebebeb"/>
+    <rect id="box-5" data-name="box" width="64" height="6" rx="3" transform="translate(1270 6011)" fill="#ebebeb"/>
+  </g>
+</svg>
