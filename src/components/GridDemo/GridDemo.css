@@ -1,0 +1,23 @@
+/* .App {
+  text-align: center;
+} */
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.custom-grid {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+/* .custom-grid .react-grid-item.cssTransforms {
+  overflow: hidden;
+} */
+
+/* .custom-grid .react-resizable-handle {
+  width: 10px;
+  height: 10px; 
+} */
+
