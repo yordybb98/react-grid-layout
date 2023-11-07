@@ -1,45 +1,8 @@
-import DashboardIcon from "../../assets/MyDashboard/icon-buildercolumn.svg";
-import BulletIcon from "../../assets/MyDashboard/icon-builderbulletlist.svg";
-import HeadingIcon from "../../assets/MyDashboard/icon-builderheading.svg";
-import ImageIcon from "../../assets/MyDashboard/icon-builderimage.svg";
-import LinkIcon from "../../assets/MyDashboard/icon-builderlink.svg";
-import NumberedListIcon from "../../assets/MyDashboard/icon-buildernumberedlist.svg";
-import TextIcon from "../../assets/MyDashboard/icon-buildertext.svg";
 import DeleteIcon from "../../assets/icon-delete-white.svg";
+import { itemsTypes } from "../../utils/types";
 import "./item.css";
 //import EmptyStateIcon from "../assets/MyDashboard/icon-builderemptystate.svg";
 //import RowIcon from "../assets/MyDashboard/icon-builderrow.svg";
-
-const itemsTypes = [
-    {
-        title: "Analysis Board",
-        icon: DashboardIcon,
-    },
-    {
-        title: "Bullet List",
-        icon: BulletIcon,
-    },
-    {
-        title: "Heading",
-        icon: HeadingIcon,
-    },
-    {
-        title: "Image",
-        icon: ImageIcon,
-    },
-    {
-        title: "HyperLink",
-        icon: LinkIcon,
-    },
-    {
-        title: "Numbered List",
-        icon: NumberedListIcon,
-    },
-    {
-        title: "Texto",
-        icon: TextIcon,
-    },
-];
 
 function Item({ type, removeItem }) {
     const item = itemsTypes[type - 1];

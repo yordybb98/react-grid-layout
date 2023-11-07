@@ -3,6 +3,7 @@ import "react-grid-layout/css/styles.css";
 import "./GridDemo.css";
 import Item from "../Item/Item";
 import { useState } from "react";
+import Toolbox from "../Toolbox/Toolbox";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -24,6 +25,7 @@ const GridDemo = () => {
 
     return (
         <>
+            <Toolbox />
             <button onClick={addItem}>Add</button>
             <button
                 onClick={() => {
@@ -35,6 +37,7 @@ const GridDemo = () => {
             {!showPreview && (
                 <ResponsiveGridLayout
                     onLayoutChange={(lay) => {
+                        console.log(lay);
                         setLayout(lay);
                     }}
                     className="custom-grid"
@@ -44,7 +47,7 @@ const GridDemo = () => {
                     rowHeight={150}
                     isBounded
                     containerPadding={[15, 15]}
-                    compactType="vertical"
+                    compactType={null}
                     preventCollision={false}>
                     {layout.map((item) => (
                         <div key={item.i} style={{ height: "auto", display: "flex" }}>
@@ -61,7 +64,7 @@ const GridDemo = () => {
                     cols={{ lg: 4 }}
                     rowHeight={150}
                     containerPadding={[15, 15]}
-                    compactType="vertical"
+                    compactType={null}
                     isDraggable={false}
                     isResizable={false}
                     preventCollision={false}>
