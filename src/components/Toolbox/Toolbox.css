@@ -1,4 +1,4 @@
-.toolbox {
+.toolboxItem {
     width: 5rem;
     height: 5rem;
     box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 20px;
@@ -11,4 +11,20 @@
     gap: 10;
     cursor: pointer;
     padding: 5;
+}
+
+.toolbox {
+    display: flex;
+    gap: 10px;
+}
+
+.toolboxHeader {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+
+.toolboxContainer {
+    display: flex;
+    gap: 30px;
 }

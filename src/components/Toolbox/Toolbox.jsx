@@ -10,22 +10,26 @@ function Toolbox({ addItem }) {
     const [list] = useState(itemsTypes);
 
     return (
-        <div style={{ display: "flex", gap: 30 }}>
-            {list.map((item) => (
-                <div
-                    key={item.id}
-                    className="toolbox"
-                    onClick={() => {
-                        addItem(item.id);
-                        /* To delete the added item from Toolbox */
-                        /* setList((prevList) => {
+        <div className="toolbox">
+            <div className="toolboxHeader">Add Item</div>
+
+            <div className="toolboxContainer">
+                {list.map((item) => (
+                    <div
+                        key={item.id}
+                        className="toolboxItem"
+                        onClick={() => {
+                            addItem(item.id);
+                            /* To delete the added item from Toolbox */
+                            /* setList((prevList) => {
                             return prevList.filter((itemList) => itemList.id !== item.id);
                         }); */
-                    }}>
-                    {item.title}
-                    <img src={item.icon} alt="" width={20} height={20} />
-                </div>
-            ))}
+                        }}>
+                        {item.title}
+                        <img src={item.icon} alt="" width={20} height={20} />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
