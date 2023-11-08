@@ -21,3 +21,8 @@ h1 {
   height: 10px; 
 } */
 
+.actionsButtonsContainer{
+  display: flex;
+  gap: 20px;
+}
+

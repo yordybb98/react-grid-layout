@@ -9,3 +9,27 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.button{
+    border-style: none;
+    padding: 10px;
+    background-color: white;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 20px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.button:active {
+    transform: translateY(4px);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.35);
+}
+
+.button:hover{
+    background-color: #dbd8d8;
+}
+
+.active{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #dbd8d8;
+    transform: translateY(1px);
+}

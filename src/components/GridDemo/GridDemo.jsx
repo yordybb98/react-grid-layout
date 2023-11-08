@@ -27,20 +27,30 @@ const GridDemo = () => {
         setItems(updatedItems);
     };
 
+    const removeAll = () => {
+        setLayout([]);
+        setCount(0);
+        setItems([]);
+    };
+
     return (
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 30 }}>
             <Toolbox addItem={addItem} />
 
             {/* Actions */}
-            <div>
-                {/* <button onClick={addItem}>Add</button> */}
+            <div className="actionsButtonsContainer">
                 <button
+                    className={`button ${showPreview ? "active" : ""}`}
                     onClick={() => {
                         setShowPreview(!showPreview);
-                    }}
-                    style={{ backgroundColor: showPreview ? "#bbb" : "white" }}>
+                    }}>
                     Show Preview
                 </button>
+                {items.length !== 0 && (
+                    <button onClick={removeAll} className="button">
+                        Remove All
+                    </button>
+                )}
             </div>
 
             {/* Layout */}

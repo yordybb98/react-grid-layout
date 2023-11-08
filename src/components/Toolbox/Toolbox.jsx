@@ -17,7 +17,7 @@ function Toolbox({ addItem }) {
                 {list.map((item) => (
                     <div
                         key={item.id}
-                        className="toolboxItem"
+                        className="toolboxItem button"
                         onClick={() => {
                             addItem(item.id);
                             /* To delete the added item from Toolbox */
