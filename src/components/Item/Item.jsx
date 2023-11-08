@@ -4,20 +4,20 @@ import "./item.css";
 //import EmptyStateIcon from "../assets/MyDashboard/icon-builderemptystate.svg";
 //import RowIcon from "../assets/MyDashboard/icon-builderrow.svg";
 
-function Item({ type, removeItem }) {
+function Item({ type, removeItem, draggableClass }) {
     const item = itemsTypes[type - 1];
 
     return (
         <div className="container" style={{ flex: 1 }}>
-            <div className="header">
+            <div className={`header ${draggableClass} `}>
                 <div className={"title"}>
                     {item.title} {type}
                 </div>
-                <span onClick={removeItem} style={{ cursor: "pointer" }}>
+                <span className="actionButton" onClick={removeItem}>
                     <img src={DeleteIcon} alt="" width={30} height={30} />
                 </span>
             </div>
-            <div className="content">
+            <div className={`content ${draggableClass}`}>
                 <img src={item.icon} alt="" className="logo" />
                 <div className="name">{item.title}</div>
             </div>
