@@ -1,0 +1,11 @@
+.mainTitle{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.mainLayout{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

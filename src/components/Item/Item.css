@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto; /* Establece la altura automática */
+    height: auto; 
   }
   
   .header {
@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: #003E65; /* Puedes ajustar el color de fondo según tus necesidades */
+    background: #003E65;
     border-radius: 10px 10px 0 0;
     width: 30%;
   }
@@ -31,25 +31,12 @@
   
   .content {
     box-sizing: border-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
     max-width: 100%;
     padding: 10px;
@@ -66,7 +53,6 @@
   
   .name {
     font-size: 1.25rem;
-    color: #3f51b5; /* Puedes ajustar el color según tus necesidades */
   }
 
   .actionButton {

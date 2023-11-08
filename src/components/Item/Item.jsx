@@ -8,9 +8,7 @@ function Item({ type, removeItem, draggableClass }) {
     return (
         <div className="container" style={{ flex: 1 }}>
             <div className={`header ${draggableClass} `}>
-                <div className={"title"}>
-                    {item.title} {type}
-                </div>
+                <div className={"title"}>{item.title}</div>
                 <span className="actionButton" onClick={removeItem}>
                     <img src={DeleteIcon} alt="" width={30} height={30} />
                 </span>

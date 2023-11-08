@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { itemsTypes } from "../../utils/types";
+import "./Toolbox.css";
 
 function Toolbox({ addItem }) {
     /* To handle toolbox items   */
@@ -13,20 +14,7 @@ function Toolbox({ addItem }) {
             {list.map((item) => (
                 <div
                     key={item.id}
-                    style={{
-                        width: 80,
-                        height: 80,
-                        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 20px",
-                        backgroundColor: "#ffffff73",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        textAlign: "center",
-                        gap: 10,
-                        cursor: "pointer",
-                        padding: 5,
-                    }}
+                    className="toolbox"
                     onClick={() => {
                         addItem(item.id);
                         /* To delete the added item from Toolbox */
