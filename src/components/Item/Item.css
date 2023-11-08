@@ -12,7 +12,8 @@
     padding: 10px;
     background: #003E65;
     border-radius: 10px 10px 0 0;
-    width: 30%;
+    width: fit-content;
+    text-wrap: nowrap;
   }
   
   .title {
