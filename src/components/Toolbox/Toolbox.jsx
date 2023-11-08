@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import Item from "../Item/Item";
+import { useState } from "react";
 import { itemsTypes } from "../../utils/types";
 
 function Toolbox({ addItem }) {
-    const [list, setList] = useState(itemsTypes);
+    /* To handle toolbox items   */
+    /* You must add the SetState */
+    /* And uncomment the line in */
+    /* the onClick function      */
+    const [list] = useState(itemsTypes);
 
     return (
         <div style={{ display: "flex", gap: 30 }}>

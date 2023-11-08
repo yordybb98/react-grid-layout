@@ -1,8 +1,6 @@
 import DeleteIcon from "../../assets/icon-delete-white.svg";
 import { itemsTypes } from "../../utils/types";
 import "./item.css";
-//import EmptyStateIcon from "../assets/MyDashboard/icon-builderemptystate.svg";
-//import RowIcon from "../assets/MyDashboard/icon-builderrow.svg";
 
 function Item({ type, removeItem, draggableClass }) {
     const item = itemsTypes[type - 1];
