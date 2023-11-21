@@ -19,7 +19,7 @@ const GridDemo = () => {
     }, []);
 
     const addItem = (type) => {
-        const newItem = { i: `item-${count}`, x: 0, y: 0, w: 1, h: 1, minW: 1, minH: 1 };
+        const newItem = { i: `item-${count}`, x: 1, y: 0, w: 1, h: 1, minW: 1, minH: 1 };
         setLayout([...layout, newItem]);
         setItems([...items, { id: `item-${count}`, type }]);
         setCount(count + 1);
