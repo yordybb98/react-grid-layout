@@ -2,8 +2,8 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "./GridDemo.css";
 import Item from "../Item/Item";
-import { useState } from "react";
 import Toolbox from "../Toolbox/Toolbox";
+import { useEffect, useState } from "react";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -12,6 +12,11 @@ const GridDemo = () => {
     const [items, setItems] = useState([]);
     const [count, setCount] = useState(0);
     const [showPreview, setShowPreview] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const addItem = (type) => {
         const newItem = { i: `item-${count}`, x: 0, y: 0, w: 1, h: 1, minW: 1, minH: 1 };
@@ -31,6 +36,12 @@ const GridDemo = () => {
         setLayout([]);
         setCount(0);
         setItems([]);
+    };
+
+    const onDrop = (layout, layoutItem) => {
+        console.log(layoutItem);
+        // Handle the drop event here
+        // You can update the layout or perform any other actions
     };
 
     return (
@@ -70,29 +81,14 @@ const GridDemo = () => {
                         containerPadding={[15, 15]}
                         compactType={null}
                         preventCollision={false}
-                        draggableHandle=".chichitojunior">
+                        draggableHandle=".chichitojunior"
+                        onDrop={onDrop}
+                        measureBeforeMount={false}
+                        useCSSTransforms={mounted}
+                        isDroppable={true}>
                         {items.map(({ id, type }) => (
                             <div key={id} style={{ height: "auto", display: "flex" }}>
                                 <Item type={type} removeItem={() => removeItem(id)} draggableClass="chichitojunior" />
-                            </div>
-                        ))}
-                    </ResponsiveGridLayout>
-                )}
-                {showPreview && (
-                    <ResponsiveGridLayout
-                        className="custom-grid"
-                        layouts={{ lg: layout }}
-                        breakpoints={{ lg: 1200 }}
-                        cols={{ lg: 4 }}
-                        rowHeight={150}
-                        containerPadding={[15, 15]}
-                        compactType={null}
-                        isDraggable={false}
-                        isResizable={false}
-                        preventCollision={false}>
-                        {layout.map((item) => (
-                            <div key={item.i} style={{ height: "auto", display: "flex" }}>
-                                <div style={{ backgroundColor: "red", width: "100%", height: "100%" }}>2</div>
                             </div>
                         ))}
                     </ResponsiveGridLayout>

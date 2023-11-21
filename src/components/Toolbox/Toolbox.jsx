@@ -18,6 +18,11 @@ function Toolbox({ addItem }) {
                     <div
                         key={item.id}
                         className="toolboxItem button"
+                        draggable={true}
+                        onDragStart={(e) => {
+                            console.log(e);
+                            e.dataTransfer.setData("asdasd");
+                        }}
                         onClick={() => {
                             addItem(item.id);
                             /* To delete the added item from Toolbox */
