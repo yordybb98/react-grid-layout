@@ -1,5 +1,4 @@
 import { Responsive, WidthProvider } from "react-grid-layout";
-import "react-grid-layout/css/styles.css";
 import "./GridDemo.css";
 import Item from "../Item/Item";
 import Toolbox from "../Toolbox/Toolbox";
@@ -39,7 +38,7 @@ const GridDemo = () => {
     };
 
     const onDrop = (layout, layoutItem) => {
-        console.log(layoutItem);
+        console.log("layoutItem", layoutItem);
         // Handle the drop event here
         // You can update the layout or perform any other actions
     };
